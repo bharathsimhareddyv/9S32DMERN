@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* h1{
+   background-color: aqua; 
+}
+h1{
+    background-color: red;
+}
+.hello2{
+    background-color: aquamarine;
+} */
+button{
+    margin: 20px;
+    margin-left: 100px;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius:10px 15px 20px 0;
+}
+h1{
+    color: green;
+}

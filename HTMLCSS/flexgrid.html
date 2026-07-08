@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+h1{
+    color: aqua;
+}
+nav{
+ display: flex;
+}
+ul{
+    display: block;
+}
+li{
+    padding: 10px;
+    list-style-type:none;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* .slide{
+    display: flex;
+    flex-wrap: wrap;
+} */
+ .slide{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+ }
+div div{
+    padding: 150px;
+    background-color: red;
+    margin: 10px;
+}
+
+@media (max-width:320px) {
+    .slide{
+        display: grid;
+        grid-template-columns:repeat(1,1fr) ;
+    }
+}
+@media (min-width:320px) {
+    .slide{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (min-width:750px) {
+    .slide{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+    </style>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+</head>
+<body>
+    <h1 >Welcome</h1>
+    <!-- <ul>
+        <li>Iphone</li>
+        <li>Samsung</li>
+        <li>Vivo</li>
+    </ul> -->
+    <nav>
+        <ul>
+            <li><a href="">Amazon</a></li>
+               <li><a href="">Flipkart</a></li>  
+                  <li><a href="">Meesho</a></li> 
+        </ul>
+        <button>Login</button>
+ </nav>
+
+        <div class="slide">
+            <div class="box">Product 1</div>
+             <div>Product 2</div>
+              <div>Product 3</div>
+               <div>Product 4</div>
+               <div>Product 5</div>
+                <div>Product 6</div>
+                 <div>Product 7</div>
+                  <div>Product 8</div>
+                   <div>Product 9</div>
+
+        </div>
+
+</body>
+</html>
