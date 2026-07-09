@@ -81,10 +81,55 @@
 //     console.log(student.roll)
 // })
 
-const Datas = fetch('https://jsonplaceholder.typicode.com/users')
-.then((res)=>res.json())
-.then((data)=>
-data.map((user)=>{
- console.log("User Email:" ,user.address.street)
-})
-)
+// const Datas = fetch('https://jsonplaceholder.typicode.com/users')
+// .then((res)=>res.json())
+// .then((data)=>
+// data.map((user)=>{
+//  console.log("User Email:" ,user.address.street)
+// })
+// )
+
+//find Higher order collection
+
+// const array =[10,20,44,55,78,44,26]
+
+// const fineElement = array.find((ele)=>{
+// // console.log(ele>50)
+// return ele>50
+// })
+// console.log(fineElement)
+
+// const filterElements = array.filter((ele)=>{
+// return ele>50
+// })
+// console.log(filterElements)
+
+// const students =[
+//     {name:"Bisal",project:"House Management",status:"pending"},
+//     {name:"Adarsh",project:"Ums Management",status:"approved"},
+//     {name:"Ravi",project:"tree Management",status:"approved"},
+//     {name:"Raju",project:"Colony Management",status:"rejected"},
+// ]
+
+// const approved = students.filter((student)=>{
+//  if(student.status === "approved"){
+//     //   console.log(student)
+//       return student
+//  }
+// })
+
+// console.log(approved)
+
+// let a =10
+// let b= 20
+
+// console.log(a>b)
+// console.log(a)
+
+
+const array =[10,20,44,55,78,44,26]
+
+const sum = array.reduce((a,s)=>{
+   return a+s
+},0)
+console.log(sum)
