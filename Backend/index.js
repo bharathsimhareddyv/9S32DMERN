@@ -24,8 +24,9 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const route = require('./routes/userRoutes')
+const cors = require('cors')
 const app = express()
-
+app.use(cors())
 app.use(express.json())
 
 app.use("/api" , route)

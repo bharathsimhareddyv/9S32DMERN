@@ -127,9 +127,51 @@
 // console.log(a)
 
 
-const array =[10,20,44,55,78,44,26]
+// const array =[10,20,44,55,78,44,26]
 
-const sum = array.reduce((a,s)=>{
-   return a+s
-},0)
-console.log(sum)
+// const sum = array.reduce((a,s)=>{
+//    return a+s
+// },0)
+// console.log(sum)
+
+
+
+//  try {
+   
+// console.log("hello")
+//  } catch (error) {
+//    console.log(error)
+//  }
+//  try {
+//    console.lag(2+2)
+//  } catch (error) {
+//    console.log(error)
+//  }
+//  try {
+//    console.log("vkadvjaks")
+//  } catch (error) {
+//    console.log(error)
+//  }
+
+
+// const arr1 =[1,2,3]
+// const arr2 =[4,5,6]
+
+// const arr3 =[...arr1 , ...arr2]
+// console.log(arr3)
+
+
+// const fruits =["Apple" , "Orange" ,"PineApple"]
+
+// const [f1 ,f2 ,f3]=fruits
+// console.log(f1)
+
+
+const student ={
+   name:"Bisal",
+   marks:20,
+   regno:12345
+}
+const {name , marks,regno}=student
+
+console.log(name)
