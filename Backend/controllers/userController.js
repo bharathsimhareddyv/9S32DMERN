@@ -1,4 +1,6 @@
 const User = require('../models/UserSchema')
+const jwt = require('jsonwebtoken')
+require('dotenv').config()
 
 const register =async(req,res)=>{
      try {
@@ -16,10 +18,11 @@ const login =async(req,res) =>{
         if(!existUser){
             return res.status(400).json("No User found Please Register or wrong Credintials")
         }
-        
+            const user = await User.findOne({email , password})
+        const token = await jwt.sign({id:user._id,email:user.email} ,process.env.JWT_SECRET,{expiresIn:'1h'})
 
-        const user = await User.findOne({email , password})
-        res.status(200).json({message:"Login Sucessfull" , id:user._id , role:user.role})
+    
+        res.status(200).json({message:"Login Sucessfull" , id:user._id , role:user.role,token})
     } catch (error) {
         res.status(400).json({message:"Wrong Credentials" , error})
     }

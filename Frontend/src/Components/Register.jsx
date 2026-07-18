@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate()
 const[name , setName]=useState("")
 const[email , setEmail]= useState("")
 const[password , setPassword]=useState("")
@@ -65,7 +67,7 @@ alert("Data Saved Sucessfully")
       <button type="submit">Register</button>
 
       </form>
-     
+      <button onClick={()=>navigate('/login')}>Login</button>
     </div>
   );
 };
